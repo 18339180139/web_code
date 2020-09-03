@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa{
+            border: 5px solid red
+        ;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<!--    <img v-bind:src="message" :title="alt" v-bind:class="{aa:showCss}">-->
+    <img :src="message" :title="alt" :class="{aa:showCss}">
+    <br>
+    <input type="button" value="点击" @click="change_showCss">
+    <input type="button" value="点击" @click="change_src">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            alt:"小二哈",
+            showCss:true,
+            message: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1599118332&di=61059fac8c10f506524ce0b87eb1c259&src=http://n.sinaimg.cn/sinacn08/40/w480h360/20181201/9363-hpevhcm5874484.jpg"
+
+        },
+        methods: {
+            change_showCss() {
+                this.showCss=!this.showCss
+            },
+            change_src() {
+                if (this.showCss) {
+                    this.message = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3291638106,1894579552&fm=26&gp=0.jpg"
+                }
+                else {
+                    this.message="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1599118332&di=61059fac8c10f506524ce0b87eb1c259&src=http://n.sinaimg.cn/sinacn08/40/w480h360/20181201/9363-hpevhcm5874484.jpg"
+                }
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
