@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+<div id="app">
+    <span v-if="message">显示了</span>
+    <span v-else="message">第一个没显示</span>
+    <span v-else-if="!message" >第二个显示了</span>
+    <br>
+    <input type="button" value="点击" @click="change_message">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: 0
+        },
+        methods: {
+            change_message() {
+                this.message = !this.message
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
