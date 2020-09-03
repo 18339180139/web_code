@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul v-for="(value,key,index) in message">
+        <li >{{index}}*{{key}}:{{value}}</li>
+
+    </ul >
+    <ul v-for="(city,index) in arr" >
+        <li>{{index}}:{{city}}</li>
+    </ul>
+    <ul>
+        <li v-for="(value, index) in users" :key="value.id">
+            {{index+1}}: {{value.username}}=={{value.age}}=={{value.arr}}
+        </li>
+    </ul>
+    <br>
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: {username:"huang",age:16,arr:"beijing"},
+            arr: ['北京','上海','广东'],
+            users:[
+                {id:1,username:"huang",age:16,arr:"beijing"},
+                {id:2,username:"jin",age:17,arr:"beijing"},
+                {id:3,username:"guo",age:18,arr:"beijing"},
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>
