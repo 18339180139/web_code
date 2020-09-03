@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span v-show="message>=18">{{message}}</span>
+    <br>
+    <input type="button" value="点击" @click="change_message">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "16"
+        },
+        methods: {
+            change_message() {
+                this.message++;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
