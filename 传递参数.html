@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <br>
+    <input type="button" value="点击" @click="change_message(88)">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "1"
+        },
+        methods:{
+            change_message(number){
+                this.message=number
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
