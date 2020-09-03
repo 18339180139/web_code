@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <br>
+    <input type="button" value="点击" @click="change_message">
+    <input type="button" value="点击" @click="change_message1()">
+    <input type="button" value="点击" @click="change_message2(66)">
+    <input type="button" value="点击" @click="change_message3(66)">
+    <input type="button" value="点击" @click="change_message4(66,77)">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "1"
+        },
+        methods: {
+            change_message() {
+                alert(event);
+            },
+            change_message1() {
+                alert(event);
+            },
+            change_message2(event) {
+                alert(event);
+            },
+            change_message3(event) {
+                alert(event);
+            },
+            change_message4(num,ber) {
+                alert(ber);
+            },
+        }
+    })
+</script>
+
+</body>
+</html>
