@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    1{{users}}
+    <br>
+    2{{users.username}}
+    <br>
+    3{{message[0]}},{{message[1]}}
+    <br>
+    4{{arr["1"][0]}}+{{arr["2"]}}
+    <br>
+    5{{arr1.arr1[0]}}+{{arr1.arr1}}
+    <br>
+    6{{arr1.arr1[0]}}+{{arr1.arr1}}
+    <br>
+    7{{user[0].username}}+{{user[1]}}
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            users: {username:"huanghansen",age:"23"},
+            message: ["上海","深圳"],
+            arr:{1:["上海","深圳"],2:["北京","天津"],3:["河南","郑州"]},
+            arr1:{arr1:["上海","深圳"],arr2:["北京","天津"],arr3:["河南","郑州"]},
+            user:[{username:"小黄",arrad:"郑州"},{username: "小红",arrad: "北京"}]
+        }
+    })
+</script>
+
+</body>
+</html>

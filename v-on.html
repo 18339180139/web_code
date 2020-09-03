@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <br>
+    <input type="button" v-on:click="change_msg" value="点击切换msg">
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "",
+
+        },
+        methods:{
+            change_msg:function () {
+                this.message="superboy"
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{msg}}
+    <br>
+    <span v-text="msg"></span>
+    <br>
+<!--    <span v-text="msg1"></span>-->
+<!--    <br>-->
+<!--    <span v-html="msg"></span>-->
+<!--    <br>-->
+<!--    <span v-html="msg1"></span>-->
+
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            msg: "<a href=\"\">百知教育</a>",
+            msg1: "<a href=\"http:\\\\www.baidu.com\">百度</a>"
+        }
+    })
+</script>
+
+</body>
+</html>
