@@ -8,14 +8,27 @@
 <div id="app">
     {{msg}}
     <br>
-    <input type="button" value="">
+    <input type="button" value="点击切换" @click="change_msg">
 </div>
 <script src="js/vue.min.js"></script>
 <script>
+    let a = 1;
     new Vue({
         el: "#app",
         data: {
             msg: ""
+        },
+        methods:{
+            change_msg:function () {
+                if (a%2===0){
+                    this.msg="第一次";
+                    a++;
+                }
+                else{
+                    this.msg="第二次"
+                    a++;
+                }
+            }
         }
     })
 </script>
